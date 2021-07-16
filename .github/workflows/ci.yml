@@ -40,7 +40,7 @@ jobs:
         HEROKU_TOKEN: "d7edaf60-8548-4efb-940a-0456936bea26"
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
-        git fetch --all --unshallow
+        git filter-branch -- --all
         git remote add heroku https://heroku:d7edaf60-8548-4efb-940a-0456936bea26@git.heroku.com/pradumnap.git
         git push heroku HEAD:main -f
     # - name: RUN app
