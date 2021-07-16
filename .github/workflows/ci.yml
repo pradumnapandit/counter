@@ -35,8 +35,8 @@ jobs:
       run: |
         export PYTHONPATH=src
         python3 test.py
-    - name: RUN app
-      run: |
-        export PYTHONPATH=src
-        pip3 install flask requests
-        sudo python3 counter-service.py
+    # - name: RUN app
+    #   run: |
+    #     export PYTHONPATH=src
+    #     pip3 install flask requests
+    #     sudo python3 counter-service.py
