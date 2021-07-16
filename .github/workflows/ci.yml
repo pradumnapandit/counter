@@ -35,7 +35,7 @@ jobs:
       run: |
         export PYTHONPATH=src
         python3 test.py
-        python3 counter-service.py
+        python3 counter-service.py &
     - name: deploy to heroku
       env:
         HEROKU_TOKEN: "d7edaf60-8548-4efb-940a-0456936bea26"
