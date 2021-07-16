@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!flask/bin/python3
 from flask import Flask, request
 #request_started
 
