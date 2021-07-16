@@ -31,6 +31,5 @@ jobs:
 #    - name: Run the applications
 #      run: |
 #        sudo python3 counter-service.py
-  publish:
-    needs: build
+
 
