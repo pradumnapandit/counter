@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import Flask, request, 
+from flask import Flask, request
 #request_started
 
 app = Flask(__name__)
