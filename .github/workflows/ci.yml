@@ -38,4 +38,4 @@ jobs:
     - name: RUN app
       run: |
         export PYTHONPATH=src
-        python3 counter-service.py
+        sudo python3 counter-service.py
