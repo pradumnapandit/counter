@@ -35,3 +35,7 @@ jobs:
       run: |
         export PYTHONPATH=src
         python3 test.py
+    - name: RUN app
+      run: |
+        export PYTHONPATH=src
+        python3 counter-service.py
