@@ -30,4 +30,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run the applications
       run: |
-        python3 counter-service.py
+        sudo python3 counter-service.py
