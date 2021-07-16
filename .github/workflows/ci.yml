@@ -37,10 +37,10 @@ jobs:
         python3 test.py
     - name: deploy to heroku
       env:
-        HEROKU_TOKEN: ${{ b9781f68-4277-4605-8352-fcdd85c73cbe }}
+        HEROKU_TOKEN: "b9781f68-4277-4605-8352-fcdd85c73cbe"
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
-        git remote add heroku https://heroku:HEROKU_TOKEN@git.heroku.com/shielded-earth-61537.git
+        git remote add heroku https://heroku:b9781f68-4277-4605-8352-fcdd85c73cbe@git.heroku.com/shielded-earth-61537.git
         git push heroku HEAD:main -f
     # - name: RUN app
     #   run: |
