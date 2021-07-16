@@ -35,6 +35,13 @@ jobs:
       run: |
         export PYTHONPATH=src
         python3 test.py
+    - name: deploy to heroku
+      env:
+        HEROKU_TOKEN: ${{ secrets.HEROKU_TOKEN }}
+      if: github.ref == 'refs/heads/main' && job.status == 'success'
+      run: |
+        git remote add heroku https://heroku:HEROKU_TOKEN@git.heroku.com/pure-fjord-79718.git
+        git push heroku HEAD:main -f
     # - name: RUN app
     #   run: |
     #     export PYTHONPATH=src
