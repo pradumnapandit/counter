@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: {{matrix.os}}
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.9]
+        os: [ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v2
@@ -31,4 +31,6 @@ jobs:
 #    - name: Run the applications
 #      run: |
 #        sudo python3 counter-service.py
+  publish:
+    needs: build
 
