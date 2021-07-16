@@ -37,10 +37,10 @@ jobs:
         python3 test.py
     - name: deploy to heroku
       env:
-        HEROKU_TOKEN: "2b2eb7b4-7d29-428a-8941-eb5745e21c92"
+        HEROKU_TOKEN: "d7edaf60-8548-4efb-940a-0456936bea26"
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
-        git remote add heroku https://heroku:2b2eb7b4-7d29-428a-8941-eb5745e21c92@git.heroku.com/shielded-earth-61537.git
+        git remote add heroku https://heroku:d7edaf60-8548-4efb-940a-0456936bea26@git.heroku.com/pradumnap.git
         git push heroku HEAD:main -f
     # - name: RUN app
     #   run: |
