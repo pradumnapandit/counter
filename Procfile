@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:80 counter-service:app
+web: gunicorn --bind 0.0.0.0:$PORT counter-service:app
